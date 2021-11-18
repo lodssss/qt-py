@@ -27,9 +27,10 @@ else: pass # loop the input
 
 path = f'{this_path}\\venv\Scripts\pyuic6.exe -x {target}{ui}.ui -o {ui}.txt'
 
-# os.system(path)
+os.system(path)
 
 open_file = f'{this_path}\{ui}.txt'
 os.system(open_file)
 
 input('press to delete file and start again\n\n')
+os.remove(open_file)
