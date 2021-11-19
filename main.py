@@ -16,7 +16,7 @@ os.system(path)
 while True:
     convert = input('''
     do again OR convert to .txt?
-    | A for again | C for convert |
+    | A for again | C for convert | V for view |
 
     ''') 
 
@@ -24,6 +24,10 @@ while True:
     if convert in 'Aa':
         pass # func for again
     elif convert in "Cc": 
+        path = f'{this_path}\\venv\Scripts\pyuic6.exe -x {target}{ui}.ui -o {target}\{ui}.py'
+
+        os.system(path)
+    elif convert in "Vv":
         path = f'{this_path}\\venv\Scripts\pyuic6.exe -x {target}{ui}.ui -o {ui}.txt'
 
         os.system(path)
@@ -33,5 +37,7 @@ while True:
 
         input('press to delete file and start again\n\n')
         os.remove(open_file)
-    else: break # loop the input
+
+    elif convert in "Xx": break
+    else: pass 
 
