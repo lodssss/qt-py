@@ -16,7 +16,7 @@ os.system(path)
 while True:
     convert = input('''
     do again OR convert to .txt?
-    | A for again | C for convert | V for view |
+    | A for again | C for convert | X to exit |
 
     ''') 
 
